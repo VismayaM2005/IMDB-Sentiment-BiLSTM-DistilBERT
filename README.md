@@ -48,13 +48,10 @@ It includes full training, evaluation, visualization, and explainability techniq
 
 ## Conflict Score 
 
-We define a "Conflict Score" as:
-
-Conflict_Score = abs(Predicted_Probability - Correct_Label)
-
-This helps identify high-confidence incorrect predictions that could be risky in real-world deployment.
-
-Top 10 high-risk predictions are saved and visualized.
+- We define a "Conflict Score" as:
+  Conflict_Score = abs(Predicted_Probability - Correct_Label)
+- This helps identify high-confidence incorrect predictions that could be risky in real-world deployment.
+- Top 10 high-risk predictions are saved and visualized.
 
 ---
 
@@ -79,6 +76,27 @@ Dl_project/
 - DistilBERT performed better in accuracy and confidence.
 - BiLSTM showed overconfidence in some wrong predictions.
 - Conflict score and explainability tools helped identify failure modes.
+
+---
+## Team Contributions
+
+🔹 Yashaswini K M – BiLSTM Model Development
+- Designed and implemented the Bidirectional LSTM model architecture using Keras.
+- Performed data preprocessing, model training, and optimization.
+- Evaluated model performance using accuracy, confusion matrix, and classification report.
+- Generated prediction outputs for comparative and explainability analysis.
+
+🔹 Thrisha R – DistilBERT Model Fine-Tuning
+- Fine-tuned the DistilBERT transformer model using the Hugging Face Transformers library.
+- Handled data tokenization, model configuration, and training pipeline.
+- Assessed model performance using key classification metrics.
+- Produced prediction results for downstream evaluation and interpretability.
+
+🔹 Vismaya M – Conflict Analysis & Explainability
+- Developed the Conflict Score framework to identify high-confidence incorrect predictions.
+- Implemented visualizations for confidence vs correctness and risk assessment for both BiLSTM and DistilBERT.
+- Applied LIME explainability to analyze local feature importance for the BiLSTM model.
+- Utilized SHAP to generate global interpretability insights for the DistilBERT model.
 
 ---
 
